@@ -1,0 +1,391 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e48362; /* Soft peach background */
+    color: #472f63; /* Darker text color for better readability */
+}
+
+/* Header Styles */
+#header {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #92c3b9; /* Light teal color */
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f; /* Vibrant pink */
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100px; /* Expanding underline effect */
+}
+
+.header-text {
+    margin-top: 20%;
+    text-align: center;
+    color: #1a1212; /* Darker text color for header */
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f; /* Highlight color */
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    color: #0c0e0a;
+    background-color: cadetblue; /* Cool blue background */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #251a1a;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 30px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f; /* Underline color */
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s ease;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 20px;
+    color: #ffffff; /* White text for better contrast */
+}
+
+.tab-contents ul li span {
+    color: #b41212; /* Red color for emphasis */
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+
+    /* Education Tab Content */
+.tab-contents#education {
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-item {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333; /* Dark text color */
+}
+
+.education-item .year {
+    font-weight: bold;
+    color: #ff004f; /* Highlight year with a distinctive color */
+}
+
+.education-item .degree {
+    font-size: 1em;
+    color: #555; /* Lighter color for the degree */
+}
+
+}
+
+/* Skills Section */
+#skills {
+    padding: 30px 0;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.skills-list .card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: #393535; /* Dark background for card */
+    color: #f4dcdc; /* Light text color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skills-list .card:hover {
+    background-color: #965151; /* Darker red on hover */
+    transform: scale(1.05); /* Scaling effect on hover */
+}
+
+.skills-list .card i {
+    font-size: 50px;
+    color: #e1dfe0; /* Light color for icons */
+    margin-bottom: 20px;
+}
+
+.skills-list .card h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.skills-list .card p {
+    font-size: 16px;
+}
+
+.skills-list .card a {
+    color: #ff004f; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skills-list .card a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 0;
+    background-color: #c78e4e; /* Warm background color */
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #744b4b; /* Darker text color for contrast */
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: hsl(130, 51%, 67%); /* Light green background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(34, 22, 22, 0.3); /* Shadow for card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(182, 91, 91, 0.952); /* Enhanced shadow on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-details {
+    padding: 20px;
+    text-align: center;
+    background-color: #946048; /* Light brown for better readability */
+}
+
+.project-details h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #e2d8d8; /* Light color for the title */
+    transition: color 0.3s ease;
+}
+
+.project-details p {
+    font-size: 1em;
+    color: #1d1414; /* Dark red color for description */
+    margin: 10px 0;
+}
+
+.project-link {
+    display: inline-block;
+    font-size: 1em;
+    color: #db1b1b; /* Red color for the link */
+    text-decoration: none;
+    border-bottom: 2px solid #db1b1b;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #aa91ee; /* Blue color on hover */
+    border-bottom: 2px solid #cf1837;
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 20px;
+    background-color: rgb(243, 229, 229); /* Dark gray background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    background-image: url(contect.jpg);
+
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    padding: 10px 15px;
+    background: #333; /* Dark button background */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+
+}
